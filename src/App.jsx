@@ -1,3 +1,6 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import Gallery from './pages/gallery/Gallery';
@@ -8,7 +11,8 @@ import Trainers from './pages/trainers/Trainers';
 
 const App = () => {
 	return (
-		<div>
+		<BrowserRouter>
+			<Navbar />
 			<Home />
 			<About />
 			<Contact />
@@ -16,7 +20,7 @@ const App = () => {
 			<Plans />
 			<Trainers />
 			<NotFound />
-		</div>
+		</BrowserRouter>
 	);
 };
 

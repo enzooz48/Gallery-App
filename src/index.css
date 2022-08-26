@@ -130,7 +130,7 @@ section__head span {
 
 .card:hover {
 	background: transparent;
-	border-radius: var(--color-gray-400);
+	border-color: var(--color-gray-400);
 	cursor: default;
 }
 

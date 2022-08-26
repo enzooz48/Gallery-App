@@ -1,26 +1,15 @@
-import { Link } from 'react-router-dom';
-import Image from '../assets/images/main_header.png';
+import React from 'react';
 
-const Header = () => {
+const Header = ({ title, image, children }) => {
 	return (
-		<header className="main__header">
-			<div className="container main__header-container">
-				<div className="main__header-left">
-					<h4>#100DaysOfWorkOut</h4>
-					<h1>Join the Legends of the Fitness World</h1>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-						adipisci dolor quis perspiciatis magnam voluptatum.
-					</p>
-					<Link to="/plans" className="btn lg">
-						Get Started
-					</Link>
+		<header className="header">
+			<div className="header__container">
+				<div className="header__container-bg">
+					<img src={image} alt="HeaderBackgroundImage" />
 				</div>
-				<div className="main__header-right">
-					<div className="main__header-circle"></div>
-					<div className="main__header-image">
-						<img src={Image} alt="MainHeaderImage" />
-					</div>
+				<div className="header__content">
+					<h2>{title}</h2>
+					<p>{children}</p>
 				</div>
 			</div>
 		</header>
